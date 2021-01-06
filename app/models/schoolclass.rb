@@ -1,3 +1,5 @@
 class SchoolClass < ActiveRecord::Base
-    
-  end
+    def to_s
+        self.title + " " + self.room_number
+      end
+end
