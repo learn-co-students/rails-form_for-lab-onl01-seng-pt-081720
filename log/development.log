@@ -203,3 +203,150 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 2856ms (Views: 2829.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/students/new" for ::1 at 2021-01-17 16:06:26 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 208ms (Views: 206.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2021-01-17 16:07:54 -0500
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 292ms (Views: 218.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2021-01-17 16:08:26 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TE9EwVWwEQay5nVxNowmaGUhcwIlRj9FLIcahV3TAxpBPUVx6p6QUMF2kmIX+L1/kKypvd5qD3SBsJNlD+lzew==", "student"=>{"first_name"=>"angel", "last_name"=>"cruz"}, "commit"=>"Create Student"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (63.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "angel"], ["last_name", "cruz"], ["created_at", "2021-01-17 21:08:26.834527"], ["updated_at", "2021-01-17 21:08:26.834527"]]
+  [1m[35m (82.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 172ms (ActiveRecord: 146.2ms)
+
+
+Started GET "/students/1" for ::1 at 2021-01-17 16:08:27 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 156ms (Views: 79.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2021-01-17 16:08:34 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h3>Student Form</h3>
+    2: 
+    3: <%= form_for(@student) do |f|%>
+    4:     <label>Student first name:</label><br>
+    5:     <%= f.text_field :first_name %><br>
+    6: 
+  
+app/views/students/edit.html.erb:3:in `_app_views_students_edit_html_erb___895837957476640708_70331225531960'
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+Started GET "/students/1/edit" for ::1 at 2021-01-17 16:29:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h3>Student Form</h3>
+    2: 
+    3: <%= form_for(@student) do |f| %>
+    4:     <label>Student first name:</label><br>
+    5:     <%= f.text_field :first_name %><br>
+    6: 
+  
+app/views/students/edit.html.erb:3:in `_app_views_students_edit_html_erb__2582923723990827310_70100270630660'
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/user1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.7ms)
+Started GET "/students/1/edit" for ::1 at 2021-01-17 16:31:01 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (558.0ms)
+Completed 200 OK in 2632ms (Views: 944.3ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/students/1" for ::1 at 2021-01-17 16:31:33 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IXQgL12FugN28jCxKtHFrly780N68bTegebe5L1JB9osBiGf4qs7VQVi16ILpV65qTYp/IHdhO8s0VcE73N3uw==", "student"=>{"first_name"=>"angelica", "last_name"=>"cruz"}, "commit"=>"Update Student", "id"=>"1"}
+No template found for StudentsController#update, rendering head :no_content
+Completed 204 No Content in 48ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2021-01-17 16:32:33 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/students/1" for ::1 at 2021-01-17 16:32:44 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TcEVuU2vzrlPfhGMKrU4LPcY7pqnZYeLDdt41v2ojhVAsxQJ8oFP7zzu9p8LwaM7ApU0JVxJt7qg7PE2r5L+dA==", "student"=>{"first_name"=>"angelica", "last_name"=>"cruz"}, "commit"=>"Update Student", "id"=>"1"}
+No template found for StudentsController#update, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2021-01-17 16:33:31 -0500
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 192ms (Views: 181.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/students/1" for ::1 at 2021-01-17 16:33:36 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C03GG5IiE1lncAcp1Dsm60xfmV0Ek5xfC+TaX11VrK4GP8erLQySDxTg4Dr1T738udJD4v+/rG6m01O/D2/czw==", "student"=>{"first_name"=>"angelica", "last_name"=>"cruz"}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "students" SET "first_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["first_name", "angelica"], ["updated_at", "2021-01-17 21:33:36.916631"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/students/1" for ::1 at 2021-01-17 16:33:36 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 238ms (Views: 153.6ms | ActiveRecord: 0.2ms)
+
+
